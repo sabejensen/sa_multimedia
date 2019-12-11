@@ -1,0 +1,214 @@
+body {
+    font-family: palatino;
+    background-color: black;
+}
+
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+                                /* Page 1 */
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+#page1 h1 {
+    font-size: 45pt;
+    font-weight: 100; 
+}
+.h1small {
+    font-size: 40pt;
+}
+#page1 p {
+    font-size: 12pt;
+    animation: pulsing 5000ms infinite;
+}
+#title-box {
+    line-height: 0pt;
+    margin-top: -19%;
+    text-align: center;
+    position: absolute;
+    margin-left: 54vw;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+@media (max-width: 1200px) {
+    #title-box {
+      background-color: black;
+      padding: 15px;
+      margin-left: 50vw;
+      padding-right: 500px;
+      border-radius: 10px;
+    }
+  }
+  @media (max-width: 1000px) {
+    #title-box {
+      margin-left: 40vw;
+      padding-right: 500px;
+    }
+  }
+  @media (max-width: 800px) {
+    #title-box {
+      margin-left: 30vw;
+      padding-right: 500px;
+    }
+  }
+  @media (max-width: 680px) {
+    #title-box {
+      margin-left: 20vw;
+      padding-right: 500px;
+    }
+  }
+#page1 {
+    width: 1300px;
+    background-repeat: no-repeat;
+    margin: 0px;
+    color: white;
+    text-align: right;
+    background-size: 100%;
+    position: fixed;
+}
+#page1 img {
+    width: 100%;
+
+}
+@keyframes pulsing {
+    0% { color: #ffffffc2; }
+    50% { color: #ffffff71; }
+    100% { color: #ffffffcb; }
+}
+#enter-button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 20px;
+    font-family: palatino;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: pulsing 5000ms infinite;
+    animation-delay: -2.5s;
+    border: 4px solid white;
+}
+#enter-button:hover {
+    animation: none;
+}
+#enter-button:active {
+    animation: none;
+    color: #ffffff71;
+}
+
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+                                /* Ripple Transition */
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+.ripple-wrap {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    font-size: 0;
+    z-index: 1000;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+  @-webkit-keyframes RIPPLER {
+    0%   { border-width: 0; }
+    40% { 
+      height: 0;
+      width: 0;
+      border-width: 1500px;
+      margin-top: -1500px;
+      margin-left:-1500px; 
+      border-color: #ffffff;
+    }
+    
+    41% { 
+      height: 0;
+      width: 0;
+      border-width: 1500px;
+      margin-top: -1500px;
+      margin-left:-1500px; 
+      border-color: #ffffff;
+    }
+    100% {
+      border-width: 1500px;
+      height: 2000px;
+      width: 2000px;
+      margin-top: -2500px;
+      margin-left:-2500px;
+      border-color: #ffffff;
+    }
+  }
+  @keyframes RIPPLER {
+    0%   { border-width: 0; 
+        border-color: #b4b4b4}
+    40% { 
+      height: 0;
+      width: 0;
+      border-width: 1500px;
+      margin-top: -1500px;
+      margin-left:-1500px; 
+      border-color: #ffffff;
+    }
+    41% { 
+      height: 0;
+      width: 0;
+      border-width: 1500px;
+      margin-top: -1500px;
+      margin-left:-1500px; 
+      border-color: #ffffff;
+    }
+    100% {
+      border-width: 1500px;
+      height: 2000px;
+      width: 2000px;
+      margin-top: -2500px;
+      margin-left:-2500px;
+      border-color: #ffffff;
+    }
+  }
+  .ripple {
+    display: block;
+    height: 0;
+    width: 0;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #dddddd;
+    border-radius: 100%;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    -webkit-animation: none;
+    animation: none;
+  }
+  .ripple-wrap.goripple {
+    display: block;
+  }
+  .ripple-wrap.goripple .ripple {
+   -webkit-animation-name: RIPPLER;
+   -webkit-animation-duration: 1.5s;
+   -webkit-animation-fill-mode: forwards;
+   animation-name: RIPPLER;
+   animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+  
+}
+
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+                                /* Page 2 */
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+#page2h1 {
+    color: black;
+}
+#page2wrap {
+    background-color: white;
+    width: 100%;
+    height: 170vh;
+}

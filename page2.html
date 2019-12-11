@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spirited Away 2</title>
+  <link href="css/app2.css" rel="stylesheet" >
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+<body>
+<div id="page-container">
+  <audio autoplay loop src="audio_onesummer.mp3"></audio>
+  <div id="image-div">
+    <img src="images/concept1.jpg" id="slide1">
+    <img src="images/concept2.jpg" id="slide2">
+    <img src="images/concept3.jpg" id="slide3">
+    <img src="images/concept4.jpg" id="slide4">
+    <!--<img src="images/concept7.jpg" id="slide5">
+    <img src="images/concept8.jpg" id="slide6">-->
+
+    
+  </div>
+  <div id="info-div">
+    <h1><span id="h1caps">D</span>EVELOPMENT</h1>
+    <p>Hayao Miyazaki was already a well established and retired filmmaker when he decided
+      to make Spirited Away. He decided while on a family trip while observing several young
+      girls who were friends of the family that he needed to make a film for 10-year-old girls.
+      He read the magazines that the girls read at the cabin and saw they were all about crushes
+      and romance, but he decided this wasn't what they "held dear in their hearts." He opted
+      to make a movie with a young girl going on a heroic, transformative journey instead.
+      <br><br>
+      He based the setting around a bathhouse from his hometown. Production of the film
+      began with a budget of 15 million dollars. A substantial portion was provided by 
+      Disney, who in exchange got right of first refusal for the US release of the film.
+      The film plays heavily with Shinto-Budhist lore. The protagonist, Chihiro, encounters
+      spirits and gods representing several real world plants and animals. Several of the
+      ideas in the film have their roots in Japanese folklore.
+    </p>
+    <button id="next-button" href="page2.html" onclick="myFunction()">NEXT</button>
+  </div>
+</div>
+
+
+
+</body>
+<script src="js/main2.js"></script>
+<script> 
+  function myFunction() {
+    setTimeout(function(){ document.location.href = "/page3.html"; }, 1900);
+  }
+</script>
+
+</html>

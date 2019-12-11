@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/motion_train.gif");
+    background-position-x: -500px;
+    background-color: black;
+    background-repeat: no-repeat;
+    font-family: palatino;
+    font-weight: 100;
+}
+
+#page-container {
+    color: white;
+    display: flex;
+}
+
+#info-div { 
+    background-color: rgba(128, 128, 128, 0.418);
+    width: 50vw;
+    margin-top: 70px;
+    margin-left: -10px;
+    padding-left: 40px;
+    text-align: right;
+    padding-right: 40px;
+}
+@media (max-width: 750px) {
+    #info-div {
+      width: 70vw;
+    }
+  }
+h1 {
+    font-size: 50pt;
+}
+.h1-cap {
+    font-size: 55pt;
+}
+
+#video-div {
+
+}
+
+#next-button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 20px;
+    font-family: palatino;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: pulsing 5000ms infinite;
+    animation-delay: -2.5s;
+    border: 4px solid white;
+    margin-left: 40%;
+}
+#next-button:hover {
+    color: rgb(68, 68, 68);
+}

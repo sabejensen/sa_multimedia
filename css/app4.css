@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/poster3.jpg");
+    background-size: 150%;
+    background-position-x: -500px;
+    background-color: black;
+    background-repeat: no-repeat;
+    font-family: palatino;
+    font-weight: 100;
+}
+
+#page-container {
+    color: white;
+}
+
+#info-div { 
+    width: 100vw;
+    text-align: center;
+    padding-right: 40px;
+}
+@media (max-width: 750px) {
+    #info-div {
+      width: 70vw;
+    }
+  }
+h1 {
+    font-size: 50pt;
+}
+.h1-cap {
+    font-size: 55pt;
+}
+
+#review-div {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 15%;
+}

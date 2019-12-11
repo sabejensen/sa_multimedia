@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spirited Away 1</title>
+  <link href="css/app.css" rel="stylesheet" >
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+<body>
+<div id="page1">
+<img src="images/poster6.jpg" style="height: 100%;">
+<div id="title-box">
+<h1>S<span class="h1small">PIRITED</span> A<span class="h1small">WAY</span></h1>
+<p>Use headphones for best experience</p>
+<button id="enter-button" href="page2.html" onclick="myFunction()">ENTER</button>
+</div>
+</div>
+
+<div id="page2" style="display: none;">
+<div id="page2wrap">
+</div>
+</div>
+
+
+
+<div class="ripple-wrap"><div class="ripple"></div></div>
+
+</body>
+<script src="js/main.js"></script>
+<script> 
+function myFunction() {
+  setTimeout(function(){ document.location.href = "/page2.html"; }, 500);
+}
+</script>
+
+</html>
